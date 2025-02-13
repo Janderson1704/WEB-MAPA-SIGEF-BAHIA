@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a52e56351f9a0c4d7e96d4a2b241478b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a52e56351f9a0c4d7e96d4a2b241478b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a52e56351f9a0c4d7e96d4a2b241478b = L.map(
+                "map_a52e56351f9a0c4d7e96d4a2b241478b",
+                {
+                    center: [-12.5797, -41.7007],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_a52e56351f9a0c4d7e96d4a2b241478b);
+
+            
+
+        
+    
+            var tile_layer_a8d2a1ba654b92fdc8dc09d72e68e19f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a8d2a1ba654b92fdc8dc09d72e68e19f.addTo(map_a52e56351f9a0c4d7e96d4a2b241478b);
+        
+    
+            var tile_layer_c57f22b75c6bbd1f54dbbb7bb54fdc0d = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri, Maxar, Earthstar Geographics",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c57f22b75c6bbd1f54dbbb7bb54fdc0d.addTo(map_a52e56351f9a0c4d7e96d4a2b241478b);
+        
+    
+            var tile_layer_cdfbfd117c0bc356562c2378e04841c0 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "\u0026copy; OpenStreetMap contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_cdfbfd117c0bc356562c2378e04841c0.addTo(map_a52e56351f9a0c4d7e96d4a2b241478b);
+        
+    
+            var macro_element_9f3c9aae4f171723fa15c5c5672e1583 = L.tileLayer.wms(
+                "http://acervofundiario.incra.gov.br/i3geo/ogc.php?",
+                {"attribution": "", "format": "image/png", "layers": "certificada_sigef_particular_ba", "opacity": 0.5, "styles": "", "transparent": true, "version": "1.1.1"}
+            );
+        
+    
+            macro_element_9f3c9aae4f171723fa15c5c5672e1583.addTo(map_a52e56351f9a0c4d7e96d4a2b241478b);
+        
+    
+            var layer_control_b4d78db3684ecf7bf4b3e775004d8777_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_a8d2a1ba654b92fdc8dc09d72e68e19f,
+                    "Esri.WorldImagery" : tile_layer_c57f22b75c6bbd1f54dbbb7bb54fdc0d,
+                    "OpenStreetMap.HOT" : tile_layer_cdfbfd117c0bc356562c2378e04841c0,
+                },
+                overlays :  {
+                    "Im\u00f3veis Certificados SIGEF - Bahia" : macro_element_9f3c9aae4f171723fa15c5c5672e1583,
+                },
+            };
+            let layer_control_b4d78db3684ecf7bf4b3e775004d8777 = L.control.layers(
+                layer_control_b4d78db3684ecf7bf4b3e775004d8777_layers.base_layers,
+                layer_control_b4d78db3684ecf7bf4b3e775004d8777_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_a52e56351f9a0c4d7e96d4a2b241478b);
+
+        
+    
+            var mouse_position_b0104c0bc5f3d7d3c617ee7c7d1a160a = new L.Control.MousePosition(
+                {
+  "position": "bottomright",
+  "separator": " : ",
+  "emptyString": "Unavailable",
+  "lngFirst": false,
+  "numDigits": 5,
+  "prefix": "",
+}
+            );
+            mouse_position_b0104c0bc5f3d7d3c617ee7c7d1a160a.options["latFormatter"] =
+                undefined;
+            mouse_position_b0104c0bc5f3d7d3c617ee7c7d1a160a.options["lngFormatter"] =
+                undefined;
+            map_a52e56351f9a0c4d7e96d4a2b241478b.addControl(mouse_position_b0104c0bc5f3d7d3c617ee7c7d1a160a);
+        
+</script>
+</html>
